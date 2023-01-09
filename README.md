@@ -57,8 +57,11 @@ All of those functions are Binomial with the following parameters:
 and all of their permutations (i.e. two Spy effects and so on).
 
 ### Agadeem, the Undercrypt
-Game rules state that only one Land card can be played each turn. A 4 cards hand based on Agadeem, the Undercrypt can not play Turntimber, Serpentine Wood as additional mana source. Additionally, I have to exclude Lotus Petal has well
-since it has been included in the section above.
+Game rules state that only one Land card can be played each turn. A 4 cards hand based on Agadeem, the Undercrypt can not play Turntimber, Serpentine Wood as additional mana source so this card goes into the Others pool.
+
+Additionally, I have to exclude Lotus Petal since it has already been included in the section above. I took a shortcut here and moved this card in the Others pool as well but I think I ended up counting some hands twice nevertheless.
+
+Maybe the correct approach is to still count it as Other Mana and then remove the hands with both Spy effect, Lotus Petal, Agadeem, the Undercrypt, Dark Ritual and other cards.
 
 So, to recap:
  - f(Spy effects) has parameters N=8 and k=1
