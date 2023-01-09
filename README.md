@@ -41,7 +41,7 @@ The hand we are looking for is a 4 cards T1 kill which is constructed in the fol
  - 1 Mana of any type
  - 3 other cards
 
-There are only 4 cards that can directly provide the initial Black mana: Lotus Petal or Agadeem, the Undercrypt. There are 4 copies of each in the deck.
+There are only 2 cards that can directly provide the initial Black mana: Lotus Petal or Agadeem, the Undercrypt. There are 4 copies of each in the deck.
 
 ### Lotus Petal
 Opening a Lotus Petal is the easiest way to build the target hand. The number of winning hands is:
