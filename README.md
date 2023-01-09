@@ -54,6 +54,7 @@ All of those functions are Binomial with the following parameters:
  - f(Dark Ritual) has parameters N=4 and k=1
  - f(one other mana) has parameters N=31-4-4=23 and k=1
  - f(other three cards) has parameters N=22 and k=3
+
 and all of their permutations (i.e. two Spy effects and so on).
 
 ### Agadeem, the Undercrypt
@@ -69,6 +70,7 @@ So, to recap:
  - f(Dark Ritual) has parameters N=4 and k=1
  - f(one other mana) has parameters N=31-4-4-4-4=15 and k=1
  - f(other three cards) has parameters N=22+4+4=30 and k=3
+
 and all of their permutations (i.e. two Spy effects and so on).
 
 ## Results
