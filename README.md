@@ -67,3 +67,6 @@ So, to recap:
  - f(one other mana) has parameters N=31-4-4-4-4=15 and k=1
  - f(other three cards) has parameters N=22+4+4=30 and k=3
 and all of their permutations (i.e. two Spy effects and so on).
+
+## Results
+If I didn't make any stupid mistakes, the probability of a T1 kill on a mull to 4 is 12.96%.
