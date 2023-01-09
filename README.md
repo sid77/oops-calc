@@ -23,7 +23,7 @@ This is the easy one, there are 8 cards in total.
 ### Mana cards
 This is where things get complicated, fast.
 
-The number of cards that reads "add <mana>" is 30. From this total:
+The number of cards that reads "add mana" is 30. From this total:
  - Remove 1 Wild Cantor, this is a mana fixer that can not be used in a 4 cards hand.
  - Remove 2 Chrome Mox, they require a second card to be imprinted on them to be used so they do not fit in the 4 cards hand as well.
  - Add 4 Summoner's Pact, they can tutor Elvish Spirit Guide and fit into the 4 cards hand constraints.
