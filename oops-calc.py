@@ -10,7 +10,8 @@ def _comb(N, k):
     return comb(N, k, exact=True, repetition=False)
 
 
-def _sum_hands(spy_effects, black_mana, dark_ritual, other_mana, other_cards):
+def _sum_hands(spy_effects, black_mana, dark_ritual, other_mana, deck_size):
+    other_cards = deck_size - spy_effects - black_mana - dark_ritual - other_mana
     winning_hands = 0
     for a in range(1, 5):
         for b in range(1, 5):
@@ -35,19 +36,18 @@ def _compute(deck_size):
     winning_hands = 0
     total_hands = _comb(deck_size, _HAND_SIZE)
     # Lotus Petal
-    spy_effects = 8
-    black_mana = 4
-    dark_ritual = 4
-    other_mana = 23
-    other_cards = deck_size - spy_effects - black_mana - dark_ritual - other_mana
     winning_hands += _sum_hands(
-        spy_effects, black_mana, dark_ritual, other_mana, other_cards
+        spy_effects=8, black_mana=4, dark_ritual=4, other_mana=23, deck_size=deck_size
     )
     # Agadeem, the Undercrypt
-    other_mana = 15
-    other_cards = deck_size - spy_effects - black_mana - dark_ritual - other_mana
     winning_hands += _sum_hands(
-        spy_effects, black_mana, dark_ritual, other_mana, other_cards
+        spy_effects=8, black_mana=4, dark_ritual=4, other_mana=19, deck_size=deck_size
+    )
+    # Remove the hands with both Lotus Petal and Agadeem, the Undercrypt since
+    # they have been added twice. One card is black_mana and the other is
+    # other_mana.
+    winning_hands -= _sum_hands(
+        spy_effects=8, black_mana=4, dark_ritual=4, other_mana=4, deck_size=deck_size
     )
     probability = winning_hands / total_hands
     print(

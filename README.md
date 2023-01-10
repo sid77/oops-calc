@@ -60,18 +60,25 @@ and all of their permutations (i.e. two Spy effects and so on).
 ### Agadeem, the Undercrypt
 Game rules state that only one Land card can be played each turn. A 4 cards hand based on Agadeem, the Undercrypt can not play Turntimber, Serpentine Wood as additional mana source so this card goes into the Others pool.
 
-Additionally, I have to exclude Lotus Petal since it has already been included in the section above. I took a shortcut here and moved this card in the Others pool as well but I think I ended up counting some hands twice nevertheless.
-
-Maybe the correct approach is to still count it as Other Mana and then remove the hands with both Spy effect, Lotus Petal, Agadeem, the Undercrypt, Dark Ritual and other cards.
+Additionally, I have to exclude Lotus Petal since it has already been included in the section above. I believe the correct approach is to still count Lotus Petal as Other Mana and then remove the hands that I counted twice which have both Spy effect, Lotus Petal, Agadeem, the Undercrypt, Dark Ritual and other cards but I am not too sure about this approach.
 
 So, to recap:
  - f(Spy effects) has parameters N=8 and k=1
  - f(Agadeem, the Undercrypt) has parameters N=4 and k=1
  - f(Dark Ritual) has parameters N=4 and k=1
- - f(one other mana) has parameters N=31-4-4-4-4=15 and k=1
- - f(other three cards) has parameters N=22+4+4=30 and k=3
+ - f(one other mana) has parameters N=31-4-4-4=19 and k=1
+ - f(other three cards) has parameters N=22+4=26 and k=3
+
+and all of their permutations (i.e. two Spy effects and so on).
+
+And the hands to remove:
+ - f(Spy effects) has parameters N=8 and k=1
+ - f(Agadeem, the Undercrypt) has parameters N=4 and k=1
+ - f(Dark Ritual) has parameters N=4 and k=1
+ - f(Lotus Petal) has parameters N=4 and k=1
+ - f(other three cards) has parameters N=41 and k=3
 
 and all of their permutations (i.e. two Spy effects and so on).
 
 ## Results
-If I didn't make any stupid mistakes, the probability of a T1 kill on a mull to 4 is 12.96%.
+If I didn't make any stupid mistakes, the probability of a T1 kill on a mull to 4 is 11.5%.
