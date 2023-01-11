@@ -1,13 +1,9 @@
 #!/usr/bin/env python3
 
-from scipy.special import comb
+from math import comb
 
 
 _HAND_SIZE = 7
-
-
-def _comb(N, k):
-    return comb(N, k, exact=True, repetition=False)
 
 
 def _sum_hands(spy_effects, black_mana, dark_ritual, other_mana, deck_size):
@@ -23,18 +19,18 @@ def _sum_hands(spy_effects, black_mana, dark_ritual, other_mana, deck_size):
                         pass
                     else:
                         hands = 1
-                        hands *= _comb(spy_effects, a)
-                        hands *= _comb(black_mana, b)
-                        hands *= _comb(dark_ritual, c)
-                        hands *= _comb(other_mana, d)
-                        hands *= _comb(other_cards, e)
+                        hands *= comb(spy_effects, a)
+                        hands *= comb(black_mana, b)
+                        hands *= comb(dark_ritual, c)
+                        hands *= comb(other_mana, d)
+                        hands *= comb(other_cards, e)
                         winning_hands += hands
     return winning_hands
 
 
 def _compute(deck_size):
     winning_hands = 0
-    total_hands = _comb(deck_size, _HAND_SIZE)
+    total_hands = comb(deck_size, _HAND_SIZE)
     # Lotus Petal
     winning_hands += _sum_hands(
         spy_effects=8, black_mana=4, dark_ritual=4, other_mana=23, deck_size=deck_size
