@@ -6,6 +6,9 @@ I have no idea of what I am doing. Last time I looked into probabilities was a L
 
 From dusting off my knowledge on the subject, it seems to me [this StackExchange answer](https://boardgames.stackexchange.com/questions/23212/whats-the-probability-of-having-a-combo-on-the-first-turn-in-mtg) makes sense so I implemented it. If this assumption is not true, well, everything coded here is a giant load of bullshit 🙂. There might be implementation errors as well.
 
+## Changelog
+2023/01/09 - Initial release
+
 ## Objective
 This script computes the probaility of a "T1 kill on a mull to 4" hand to understand why this deck mulligans so well. And also because the constraints for this hand make the computation much easier.
 
