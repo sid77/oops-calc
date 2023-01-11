@@ -84,4 +84,4 @@ And the hands to remove:
 and all of their permutations (i.e. two Spy effects and so on).
 
 ## Results
-If I didn't make any stupid mistakes, the probability of a T1 kill on a mull to 4 is 11.5%.
+If I didn't make any stupid mistakes, the probability of a T1 kill on a mull to 4 is 11.27%.
