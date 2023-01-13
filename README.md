@@ -8,6 +8,7 @@ From dusting off my knowledge on the subject, it seems to me [this StackExchange
 
 ## Changelog
 2023/01/11 - Force k=0 for Lotus Petal in Agadeem, the Undercrypt hands
+
 2023/01/09 - Initial release
 
 ## Objective
