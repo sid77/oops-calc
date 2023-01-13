@@ -7,13 +7,14 @@ I have no idea of what I am doing. Last time I looked into probabilities was a L
 From dusting off my knowledge on the subject, it seems to me [this StackExchange answer](https://boardgames.stackexchange.com/questions/23212/whats-the-probability-of-having-a-combo-on-the-first-turn-in-mtg) makes sense so I implemented it. If this assumption is not true, well, everything coded here is a giant load of bullshit 🙂. There might be implementation errors as well.
 
 ## Changelog
+2023/01/11 - Force k=0 for Lotus Petal in Agadeem, the Undercrypt hands
 2023/01/09 - Initial release
 
 ## Objective
 This script computes the probaility of a "T1 kill on a mull to 4" hand to understand why this deck mulligans so well. And also because the constraints for this hand make the computation much easier.
 
 ## Magic Numbers
-The reference deck is a stock 61 cards Oops with Reanimate.
+The [reference deck](Oops.txt) is a stock 61 cards Oops with Reanimate.
 
 There are three different pools of cards in a reference Oops deck:
  - Spy effects, these cards dump your library into the graveyard.
@@ -51,37 +52,29 @@ Opening a Lotus Petal is the easiest way to build the target hand. The number of
 
 f(Lotus Petal) * f(Dark Ritual) * f(Spy effect) * f(one other mana) * f(other three cards)
 
-All of those functions are Binomial with the following parameters:
- - f(Spy effects) has parameters N=8 and k=1
- - f(Lotus Petal) has parameters N=4 and k=1
- - f(Dark Ritual) has parameters N=4 and k=1
- - f(one other mana) has parameters N=31-4-4=23 and k=1
- - f(other three cards) has parameters N=22 and k=3
+A card from Other Mana is needed if and only if we open exactly 1 Lotus Petal and exactly 1 Dark Ritual. If we open 2+ of any of those cards we threat the rest of the deck as fillers for the initial hand.
 
-and all of their permutations (i.e. two Spy effects and so on).
+All of those functions are Binomial with the following parameters:
+ - f(Spy effects) has parameters N=8 and k>=1
+ - f(Lotus Petal) has parameters N=4 and k>=1
+ - f(Dark Ritual) has parameters N=4 and k>=1
+ - f(one other mana) has parameters N=31-4-4=23 and k>=1
+ - f(other three cards) has parameters N=22 and k<=3 if we need one other mana otherwise has parameters N=61-4-4-8=45 and k<=3
 
 ### Agadeem, the Undercrypt
 Game rules state that only one Land card can be played each turn. A 4 cards hand based on Agadeem, the Undercrypt can not play Turntimber, Serpentine Wood as additional mana source so this card goes into the Others pool.
 
-Additionally, I have to exclude Lotus Petal since it has already been included in the section above. I believe the correct approach is to still count Lotus Petal as Other Mana and then remove the hands that I counted twice which have both Spy effect, Lotus Petal, Agadeem, the Undercrypt, Dark Ritual and other cards but I am not too sure about this approach.
+It also can not play more than one Agadeem, the Undercrypt if there are multiple copies in it but it can play 2+ Dark Ritual, with the same considerations as above.
+
+Additionally, I have to exclude Lotus Petal since it has already been included in the section above.
 
 So, to recap:
- - f(Spy effects) has parameters N=8 and k=1
- - f(Agadeem, the Undercrypt) has parameters N=4 and k=1
- - f(Dark Ritual) has parameters N=4 and k=1
- - f(one other mana) has parameters N=31-4-4-4=19 and k=1
- - f(other three cards) has parameters N=22+4=26 and k=3
-
-and all of their permutations (i.e. two Spy effects and so on).
-
-And the hands to remove:
- - f(Spy effects) has parameters N=8 and k=1
- - f(Agadeem, the Undercrypt) has parameters N=4 and k=1
- - f(Dark Ritual) has parameters N=4 and k=1
- - f(Lotus Petal) has parameters N=4 and k=1
- - f(other three cards) has parameters N=41 and k=3
-
-and all of their permutations (i.e. two Spy effects and so on).
+ - f(Lotus Petal) has parameters N=4 and k=0
+ - f(Spy effects) has parameters N=8 and k>=1
+ - f(Agadeem, the Undercrypt) has parameters N=4 and k>=1
+ - f(Dark Ritual) has parameters N=4 and k>=1
+ - f(one other mana) has parameters N=31-4-4-4-4=15 and k>=1
+ - f(other three cards) has parameters N=22+4=26 and k<=3 if we need one other mana otherwise has parameters N=61-4-4-4-8=41 and k<=3
 
 ## Results
 If I didn't make any stupid mistakes, the probability of a T1 kill on a mull to 4 is 11.27%.
