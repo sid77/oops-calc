@@ -11,9 +11,9 @@
 4 Thoughtseize
 4 Summoner's Pact
 1 Wild Cantor
-3 Cabal Ritual
+4 Cabal Ritual
 2 Cabal Therapy
-2 Chrome Mox
+1 Chrome Mox
 1 Dread Return
 4 Undercity Informer
 4 Lotus Petal
@@ -21,8 +21,7 @@
 1 Reanimate
 
 4 Force of Vigor
-2 Veil of Summer
+2 Reanimate
 4 Leyline of Sanctity
 4 Xantid Swarm
 1 Foundation Breaker
-
