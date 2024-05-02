@@ -96,9 +96,7 @@ def _compute(deck_size, other_mana, other_cards):
                             hands *= comb(adjusted_other_cards, fillers)
                             winning_hands += hands
                 else:
-                    fillers = (
-                        _HAND_SIZE - agadeems - dark_rituals - spy_effects
-                    )
+                    fillers = _HAND_SIZE - agadeems - dark_rituals - spy_effects
                     if fillers >= 0:
                         hands = 1
                         hands *= comb(_LOTUS_PETALS, 0)
@@ -108,9 +106,7 @@ def _compute(deck_size, other_mana, other_cards):
                         hands *= comb(rest_of_deck, fillers)
                         winning_hands += hands
     probability = winning_hands / total_hands
-    print(
-        f"The probability of a 4 cards winning hand is {probability}"
-    )
+    print(f"The probability of a 4 cards winning hand is {probability}")
 
 
 if __name__ == "__main__":
