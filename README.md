@@ -7,6 +7,8 @@ I have no idea of what I am doing. Last time I looked into probabilities was a L
 From dusting off my knowledge on the subject, it seems to me [this StackExchange answer](https://boardgames.stackexchange.com/questions/23212/whats-the-probability-of-having-a-combo-on-the-first-turn-in-mtg) makes sense so I implemented it. If this assumption is not true, well, everything coded here is a giant load of bullshit 🙂. There might be implementation errors as well.
 
 ## Changelog
+2024/06029 - Add calculator for good opening hands in Modern Oops, All Spells!. This 67 cards deck is taken from the [Modern Oops, All Spells! Primer](https://solitairethegathering.net/index.php?title=Oops:Primer), a "good" starting hand is one with at least 2x lands, 1x mana rock and 1x win condition. The "no Belcher" comment means I don't count Goblin Charblecher as a win condition in these opening hands
+
 2024/05/02 - Update stock deck list with 1x Chrome Mox, 4x Cabal Ritual split. Fix fillers count in Agadeem, the Undercrypt hands
 
 2023/01/11 - Force k=0 for Lotus Petal in Agadeem, the Undercrypt hands
