@@ -74,6 +74,12 @@ if __name__ == "__main__":
     # print("### 60 cards (-2 lands, -3 rocks, -2 Informer, with Belcher)")
     # _compute(_DECK_SIZE - 7, _WIN_CONS - 1, _LANDS - 2, _ROCKS - 3, _OTHER_CARDS - 1)
 
+    print("### 60 cards (-4 lands, -1 rocks, -2 Informer, no Belcher)")
+    _compute(_DECK_SIZE - 7, _WIN_CONS - 2, _LANDS - 4, _ROCKS - 1, _OTHER_CARDS)
+
+    # print("### 60 cards (-4 lands, -1 rocks, -2 Informer, with Belcher)")
+    # _compute(_DECK_SIZE - 7, _WIN_CONS - 1, _LANDS - 4, _ROCKS - 1, _OTHER_CARDS - 1)
+
     print("### 69 cards (+1 land, +1 rock, no Belcher)")
     _compute(_DECK_SIZE + 2, _WIN_CONS, _LANDS + 1, _ROCKS + 1, _OTHER_CARDS)
 
