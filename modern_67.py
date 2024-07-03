@@ -50,34 +50,34 @@ if __name__ == "__main__":
     # print("### 61 cards (-3 lands, -3 rocks, with Belcher)")
     # _compute(_DECK_SIZE - 6, _WIN_CONS + 1, _LANDS - 3, _ROCKS - 3, _OTHER_CARDS - 1)
 
-    print("### 61 cards (-2 lands, -3 rocks, -1 Informer, no Belcher)")
+    print("### 61 cards (-2 lands, -3 rocks, -1 win cons, no Belcher)")
     _compute(_DECK_SIZE - 6, _WIN_CONS - 1, _LANDS - 2, _ROCKS - 3, _OTHER_CARDS)
 
-    # print("### 61 cards (-2 lands, -3 rocks, -1 Informer, with Belcher)")
+    # print("### 61 cards (-2 lands, -3 rocks, -1 win cons, with Belcher)")
     # _compute(_DECK_SIZE - 6, _WIN_CONS, _LANDS - 2, _ROCKS - 3, _OTHER_CARDS - 1)
 
-    print("### 60 cards (-3 lands, -3 rocks, -1 Informer, no Belcher)")
+    print("### 60 cards (-3 lands, -3 rocks, -1 win cons, no Belcher)")
     _compute(_DECK_SIZE - 7, _WIN_CONS - 1, _LANDS - 3, _ROCKS - 3, _OTHER_CARDS)
 
-    # print("### 60 cards (-3 lands, -3 rocks, -1 Informer, with Belcher)")
+    # print("### 60 cards (-3 lands, -3 rocks, -1 win cons, with Belcher)")
     # _compute(_DECK_SIZE - 7, _WIN_CONS, _LANDS - 3, _ROCKS - 3, _OTHER_CARDS - 1)
 
-    print("### 60 cards (-2 lands, -4 rocks, -1 Informer, no Belcher)")
+    print("### 60 cards (-2 lands, -4 rocks, -1 win cons, no Belcher)")
     _compute(_DECK_SIZE - 7, _WIN_CONS - 1, _LANDS - 2, _ROCKS - 4, _OTHER_CARDS)
 
-    # print("### 60 cards (-2 lands, -4 rocks, -1 Informer, with Belcher)")
+    # print("### 60 cards (-2 lands, -4 rocks, -1 win cons, with Belcher)")
     # _compute(_DECK_SIZE - 7, _WIN_CONS, _LANDS - 2, _ROCKS - 4, _OTHER_CARDS - 1)
 
-    print("### 60 cards (-2 lands, -3 rocks, -2 Informer, no Belcher)")
+    print("### 60 cards (-2 lands, -3 rocks, -2 win cons, no Belcher)")
     _compute(_DECK_SIZE - 7, _WIN_CONS - 2, _LANDS - 2, _ROCKS - 3, _OTHER_CARDS)
 
-    # print("### 60 cards (-2 lands, -3 rocks, -2 Informer, with Belcher)")
+    # print("### 60 cards (-2 lands, -3 rocks, -2 win cons, with Belcher)")
     # _compute(_DECK_SIZE - 7, _WIN_CONS - 1, _LANDS - 2, _ROCKS - 3, _OTHER_CARDS - 1)
 
-    print("### 60 cards (-4 lands, -1 rocks, -2 Informer, no Belcher)")
+    print("### 60 cards (-4 lands, -1 rocks, -2 win cons, no Belcher)")
     _compute(_DECK_SIZE - 7, _WIN_CONS - 2, _LANDS - 4, _ROCKS - 1, _OTHER_CARDS)
 
-    # print("### 60 cards (-4 lands, -1 rocks, -2 Informer, with Belcher)")
+    # print("### 60 cards (-4 lands, -1 rocks, -2 win cons, with Belcher)")
     # _compute(_DECK_SIZE - 7, _WIN_CONS - 1, _LANDS - 4, _ROCKS - 1, _OTHER_CARDS - 1)
 
     print("### 69 cards (+1 land, +1 rock, no Belcher)")
