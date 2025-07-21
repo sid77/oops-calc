@@ -8,6 +8,7 @@ From dusting off my knowledge on the subject, it seems to me [this StackExchange
 
 ## Changelog
 2025/07/22 - Add calculator for a "T1 win on a mull to 4" hand in Timeless (MTG Arena). An example stock list for this format has been taken from [here](https://moxfield.com/decks/N5muFkhTRk-CGI76ajSYQw).
+
 2025/02/12 - Add calculator for good opening hands in Pauper 2-lands Spy (Oops, All Spells!). This 60 cards deck doesn't have a stock list yet, I've taken [this list](https://moxfield.com/decks/RG2j6wqguUyx00w1BF_ONA) based on a request from one of the Oops Discord users. Some decks have only 4x spy effects and other decks run up to 6x. This one runs 5x. A "good" starting hand is one with a spy effect and a way to take out the two lands from the deck, either by having them in hand already or using Land Grant or one of the land cyclers
 
 2024/06029 - Add calculator for good opening hands in Modern Oops, All Spells!. This 67 cards deck is taken from the [Modern Oops, All Spells! Primer](https://solitairethegathering.net/index.php?title=Oops:Primer), a "good" starting hand is one with at least 2x lands, 1x mana rock and 1x win condition. The "no Belcher" comment means I don't count Goblin Charblecher as a win condition in these opening hands
