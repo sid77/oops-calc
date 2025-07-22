@@ -7,6 +7,8 @@ I have no idea of what I am doing. Last time I looked into probabilities was a L
 From dusting off my knowledge on the subject, it seems to me [this StackExchange answer](https://boardgames.stackexchange.com/questions/23212/whats-the-probability-of-having-a-combo-on-the-first-turn-in-mtg) makes sense so I implemented it. If this assumption is not true, well, everything coded here is a giant load of bullshit 🙂. There might be implementation errors as well.
 
 ## Changelog
+2025/07/23 - Experimental code to figure out the self-Thoughtseize T1 hands for Timeless. I tried to make these hands distinct from the previous mull to 4 strategy so results can be summed together. I'm not too confident on this code, though.
+
 2025/07/22 - Add calculator for a "T1 win on a mull to 4" hand in Timeless (MTG Arena). An example stock list for this format has been taken from [here](https://moxfield.com/decks/N5muFkhTRk-CGI76ajSYQw).
 
 2025/02/12 - Add calculator for good opening hands in Pauper 2-lands Spy (Oops, All Spells!). This 60 cards deck doesn't have a stock list yet, I've taken [this list](https://moxfield.com/decks/RG2j6wqguUyx00w1BF_ONA) based on a request from one of the Oops Discord users. Some decks have only 4x spy effects and other decks run up to 6x. This one runs 5x. A "good" starting hand is one with a spy effect and a way to take out the two lands from the deck, either by having them in hand already or using Land Grant or one of the land cyclers
