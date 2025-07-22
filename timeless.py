@@ -15,7 +15,7 @@ _REANIMATES = 4
 _TSEIZES = 2
 
 
-def compute(
+def compute_mull_to_4(
     hand_size=_HAND_SIZE,
     deck_size=_DECK_SIZE,
     spy_effects=_SPY_EFFECTS,
@@ -65,6 +65,6 @@ def compute(
 
 if __name__ == "__main__":
     print("# 60 cards deck:")
-    compute()
-    print("# 61 cards deck:")
-    compute(deck_size=61)
+    compute_mull_to_4()
+    print("# 61 cards :")
+    compute_mull_to_4(deck_size=61)
